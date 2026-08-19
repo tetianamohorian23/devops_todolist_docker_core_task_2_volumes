@@ -3,7 +3,7 @@
 ## 1. Build MySQL image
 
 ```
-docker build . -f Dockerfile.mysql -t my-sql-local:1.0.0
+docker build . -f Dockerfile.mysql -t mysql-local:1.0.0
 ```
 
 ## 2. Create a Docker volume for MySQL data
@@ -15,7 +15,7 @@ docker volume create mysql-data
 ## 3. Run the MySQL container with the volume 
 
 ```
-docker run -d --name mysql-local -p 3306:3306 -v mysql-data:/var/lib/mysql my-sql-local:1.0.0
+docker run -d --name mysql-local -p 3306:3306 -v mysql-data:/var/lib/mysql mysql-local:1.0.0
 ```
 
 ## 4. Check MySQL container logs
